@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Wire+One&display=swap');
+
+:root{
+    --color-fondo: #003049;
+    --color-letra: #F77F00;
+    --color-tercero: #FCBF49;
+    --lineas-divisorias: #D62828;
+}
+
+/*ESTILOS GLOBALES*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Playwrite New Zealand Guías;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+/*BARRA SUPERIOR */
+.top-bar {
+    background-color: var(--color-fondo); /* */
+    color: var(--color-letra);
+    padding: 10px 5%; /* Padding vertical y horizontal responsivo */
+    display: flex;
+    justify-content: space-between; /* Elementos izquierda y derecha */
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.top-bar-left, .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaciado entre elementos */
+}
+
+.top-bar .separator,
+.top-bar .social-separator {
+    font-weight: 300;
+    opacity: 0.7; /* Separadores más sutiles */
+}
+
+.top-bar-right a {
+    color: var(--color-letra);
+    font-weight: bold;
+}
+
+/* BARRA PRINCIPAL */
+.main-bar {
+    background-color: var(--color-fondo);
+    color: black;
+    padding: 20px 5%; /* Más padding vertical */
+    display: flex;
+    justify-content: space-between; /* Logotipo a la izquierda, menú/búsqueda a la derecha */
+    align-items: center;
+    border-bottom: 3px solid var(--lineas-divisorias); /* Línea divisoria sutil inferior */
+}
+
+/* Contenedor del logotipo */
+.logo-container {
+    /* Marcador de posición para el logotipo real */
+    display: flex;
+    align-items: center;
+}
+
+/* imagen */
+.logo-placeholder {
+    width: 170px; /* tamaño del logo */
+    height: 60px;
+    color: #555;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Menú de Navegación */
+.main-nav ul {
+    display: flex;
+    gap: 50px; /* Espaciado entre enlaces del menú */
+    align-items: center;
+}
+
+.main-nav a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.95em;
+    color: var(--color-letra); /* colores de las letras definidas arriba */
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* flechitas */
+.nav-arrow {
+    font-size: 0.7em;
+    margin-left: 6px;
+    opacity: 0.8;
+}
+
+/* Contenedor de Búsqueda */
+.search-container {
+    font-size: 1.6em; /* Tamaño grande para el icono de búsqueda */
+    cursor: pointer;
+    color: var(--color-tercero);
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor{
+    max-width: 1200px; /*ancho del contenedor*/
+    margin-left: auto; /*contenedor centrado*/
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*PARA EL CONTENIDO*/
+.imagen_general{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/yogurt.jpg'); 
+    background-position: center;
+    background-attachment: fixed ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo-grande {
+    color: white;
+    font-size: 50px; 
+    letter-spacing: 15px; 
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.btn-abrir {
+    background: transparent; /* Sin fondo */
+    color: white; /* Texto blanco */
+    border: 2px solid red; /* Borde rojo */
+    padding: 10px 30px; /* Espacio interior para que parezca botón */
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer; /* Cambia el mouse a una manito */
+    transition: background 0.3s; /* Para que el hover sea suave */
+}
+
+/* Efecto al pasar el mouse (opcional pero recomendado) */
+.btn-abrir:hover {
+    background-color: red;
+}
