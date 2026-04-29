@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #CA5995;
+    --color-segundo: #FFB090;
+    --color-fondo: #FFF1D3;
+    --surface-color: #5D1C6A;
+    --color-griss: #444444;
+}
+*{
+    margin: 0;
+    box-sizing: border-box; /*hace que el ancho no se incremete por los padding*/
+}
+h1,h2,h3 {margin-bottom: 0.5em;} /*Unidad relativa con respecto al tamaño de las letras*/
+p{
+    margin-bottom: 1em;
+}
+body {
+    font-family: 'Urbanist', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 17px;
+}
+h1 {
+    font-size: 72px; /* para agrandar las letras*/
+    font-weight: 200;/* para el grosor de las letras*/
+    letter-spacing: 4px; /*Separacion de las letras*/
+}
+figure{
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px; 
+    text-transform: uppercase; /*transformamos nuestro texto a mayusculas*/
+}
+a{
+    color: var(--color-primario);
+    text-decoration: underline;
+}
+a:hover{
+    color: var(--surface-color);
+    text-decoration: underline;
+}
+#titulo_princ{
+    background-color: var(--color-primario); /*color de fondo*/
+    color: var(--color-segundo) ; /*color de texto*/
+}
+#empresa{
+    background-color: var(--surface-color); /*imagen de fondo*/
+}
+#empresa figure{
+    margin-bottom: 0;
+}
+#anuncio{
+    background-image: url("../image/shakira.jpg"); /*es para una imagen de fondo*/
+    color: white;
+    background-size: cover; /*es similar a cuando queremos que una imagen sea responsiva. El tamaño de la imagen se acopla*/
+    background-position: right top; /*manten tu posicion en la derecha y tambien arriba de modo que no se pierda la imagen en esos dos sectores*/
+}
+#historia{
+    background-color: var(--color-primario); /*color de fondo*/
+    color: var(--color-segundo) ; /*color de texto*/
+}
+#cursos{
+    background-color: var(--color-fondo);
+    color: black;
+}
+#aviso{
+    background-image: url("../image/familia.jpg"); /*para es para una imagen de fondo*/
+    color: white;
+    background-size: cover; /*es similar a cuando queremos que una imagen sea responsiva. El tamaño de la imagen se acopla*/
+    text-align: right; /*texto alineado a la derecha*/
+    background-attachment: fixed; /*manten fijo la posicion de la imagen*/
+}
+#main-footer{
+    background-color: var(--color-griss) ;
+    color: white;
+    padding: 45px 0;
+}
+#logo{
+    max-width: 200px;
+}
+#top-nav{
+    background-color: green;
+}
+.img{
+    display: block;
+}
+
+/*cuando una caja tiene class y quieres q esa caja tenga estilo comienzas  con un  punto*/
+.container{
+    max-width: 1200px; /*ancho del contenedor*/
+    margin-left: auto; /*contenedor centrado*/
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.padded{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.row{
+    display: flex; /*acomoda los objetos uno al costado del otro. A las cajas existentes*/
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.col{
+    flex-basis: 0;
+    flex-grow: 1; /*te quiero como 10 a las 3 personas. En este caso le decimos crece en ancho lo mismo para las tres cajas*/
+    padding-left: 12px; /*espacio entre dos cajas a la izquierda*/
+    padding-right: 12px;
+   
+}
+.col-50{ /*para ancho un contenedor a la mitad*/
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.img-fluid{
+    max-width: 100%; /*que la imagen se adecue a su contenedor*/
+}
+.centrado_vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.display-1{
+    font-size: 72px;
+    font-weight: 200;
+    letter-spacing: -3px;
+    list-style: 0.9;
+}
+.texto_importante{ /*Esta clase se hha creado para modificar una parte de una letra*/
+    font-weight: 400;
+    color: var(--surface-color);
+    font-style: italic;
+}
+.menu{
+    list-style: none;
+    padding-left: 0;
+    display: flex; /*sirve para poner la lista de manera horizontal*/
+}
+.menu li a:hover{
+    text-decoration: none;
+}
+
+.menu-top li a{
+    color: blue;
+    font-size: 0.8em;
+    padding: 8px 12px;
+}
+.menu-top li a:hover{
+    color: white;
+    background-color: black;
+}
